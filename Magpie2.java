@@ -18,7 +18,7 @@ public class Magpie2
 	 */
 	public String getGreeting()
 	{
-		return "Hello, let's talk.";
+		return "Hi Hi!!! Let's chat!";
 	}
 	
 	/**
@@ -31,16 +31,18 @@ public class Magpie2
 	public String getResponse(String statement)
 	{
 		String response = "";
-		if (statement.indexOf("no") >= 0)
+		if ( statement.length() <=0)
+        {
+            response = "Hey, you need to say something first!";
+        }
+		else if (statement.indexOf("no") >= 0)
 		{
-			response = "Why so negative?";
+			response = "Are you sure? You won't even tell me a thing?";
 		}
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0)
+		else if (statement.indexOf("cat") >= 0
+				|| statement.indexOf("dog") >= 0)
 		{
-			response = "Tell me more about your family.";
+			response = "Oh, pets! Tell me more about your pets!";
 		}
 		else
 		{
